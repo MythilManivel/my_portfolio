@@ -21,70 +21,68 @@ const Publications = () => {
   return (
     <section id="publications" className="section-container">
       <div className="max-w-6xl mx-auto">
-        <span className="section-label">PUBLICATIONS</span>
-        <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-16">
+        <span className="section-label text-xs sm:text-sm">PUBLICATIONS</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-foreground mb-10 sm:mb-16">
           Publications
         </h2>
 
-        <div className="grid md:grid-cols-1 gap-8">
+        <div className="grid md:grid-cols-1 gap-6 sm:gap-8">
           {publications.map((pub, index) => (
             <div
               key={index}
-              className="group bg-card rounded-3xl p-8 border border-border card-hover flex gap-8"
-              style={{ alignItems: 'flex-start' }}
+              className="group bg-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-border card-hover flex flex-col sm:flex-row gap-4 sm:gap-8"
             >
-              {/* Left card with two images side by side */}
-              <div className="flex flex-col gap-4 shrink-0">
-                <div className="flex gap-4">
+              {/* Left card with image */}
+              <div className="flex flex-col gap-2 sm:gap-4 shrink-0 w-full sm:w-auto">
+                <div className="flex gap-2 sm:gap-4 justify-center sm:justify-start">
                   <img
-  src={bookImage1}
-  alt="Book Cover 1"
-  className="w-60 h-100 object-cover rounded-lg"
-/>
-
+                    src={bookImage1}
+                    alt="Book Cover"
+                    className="w-32 h-44 sm:w-48 sm:h-64 object-cover rounded-lg"
+                  />
                 </div>
               </div>
 
               {/* Right card: Publication content */}
               <div className="flex-1">
                 {/* Period */}
-                <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
+                  <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   {pub.period}
                 </div>
 
                 {/* Title and publisher info */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <BookOpen className="w-7 h-7 text-primary" />
+                <div className="flex gap-3 sm:gap-4 mb-4 sm:mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <BookOpen className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                   </div>
 
-                  <div>
-                    <h3 className="text-xl font-bold font-display text-foreground group-hover:text-primary transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-xl font-bold font-display text-foreground group-hover:text-primary transition-colors mb-0.5 sm:mb-1 line-clamp-2">
                       {pub.title}
                     </h3>
-                    <p className="text-primary font-medium">
+                    <p className="text-xs sm:text-base text-primary font-medium">
                       {pub.type} @ {pub.publisher}
                     </p>
                   </div>
                 </div>
 
                 {/* Description */}
-                <ul className="space-y-3 mb-6">
-                  {pub.description.map((desc, idx) => (
+                <ul className="space-y-1.5 sm:space-y-3 mb-4 sm:mb-6">
+                  {pub.description.slice(0, 1).map((desc, idx) => (
                     <li
                       key={idx}
-                      className="text-muted-foreground leading-relaxed flex items-start gap-3"
+                      className="text-muted-foreground text-xs sm:text-base leading-relaxed flex gap-2 sm:gap-3"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-2 shrink-0" />
+                      <span className="w-0.5 h-0.5 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/50 mt-1 sm:mt-2 shrink-0" />
                       {desc}
                     </li>
                   ))}
                 </ul>
 
                 {/* ISBN + Link */}
-                <div className="flex flex-col gap-3 mb-6 text-sm text-muted-foreground">
-                  <p>
+                <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6 text-xs sm:text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-base">
                     <strong>ISBN:</strong> {pub.isbn}
                   </p>
                   <a
@@ -93,10 +91,7 @@ const Publications = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
                   >
-                    <Link className="w-4 h-4" />
-                    View Publication
-                  </a>
-                </div>
+                    <Link className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">

@@ -52,48 +52,48 @@ const Activities = () => {
   return (
     <section id="activities" className="section-container">
       <div className="max-w-6xl mx-auto">
-        <span className="section-label">ACTIVITIES & LEADERSHIP</span>
-        <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-16">Activities & Leadership</h2>
+        <span className="section-label text-xs sm:text-sm">ACTIVITIES & LEADERSHIP</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-foreground mb-10 sm:mb-16">Activities & Leadership</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {activities.map((activity, index) => {
             const Icon = activity.icon;
             return (
               <div
                 key={index}
-                className="group bg-card rounded-3xl p-8 border border-border card-hover"
+                className="group bg-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-border card-hover"
               >
-                <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
+                  <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   {activity.period}
                 </div>
 
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-7 h-7 text-primary" />
+                <div className="flex gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold font-display text-foreground group-hover:text-primary transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-xl font-bold font-display text-foreground group-hover:text-primary transition-colors">
                       {activity.title}
                     </h3>
-                    <p className="text-primary font-medium">@ {activity.organization}</p>
+                    <p className="text-xs sm:text-base text-primary font-medium">@ {activity.organization}</p>
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   {activity.description.map((desc, idx) => (
-                    <li key={idx} className="text-muted-foreground leading-relaxed flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-2 shrink-0" />
+                    <li key={idx} className="text-muted-foreground text-xs sm:text-base leading-relaxed flex gap-2 sm:gap-3">
+                      <span className="w-0.5 h-0.5 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/50 mt-1 sm:mt-2 shrink-0" />
                       {desc}
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {activity.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary font-medium"
+                      className="text-xs px-2 sm:px-4 py-1 sm:py-2 rounded-full bg-primary/10 text-primary font-medium"
                     >
                       {tag}
                     </span>

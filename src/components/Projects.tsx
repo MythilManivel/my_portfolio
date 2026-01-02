@@ -84,16 +84,16 @@ const Projects = () => {
   return (
     <section id="projects" className="section-container section-alt">
       <div className="max-w-6xl mx-auto">
-        <span className="section-label">PROJECTS</span>
-        <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-16">Projects</h2>
+        <span className="section-label text-xs sm:text-sm">PROJECTS</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-foreground mb-12 sm:mb-16">Projects</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-card rounded-3xl overflow-hidden border border-border card-hover"
+              className="group bg-card rounded-2xl sm:rounded-3xl overflow-hidden border border-border card-hover"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-40 sm:h-56 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -106,48 +106,49 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+                  className="absolute top-2 sm:top-4 right-2 sm:right-4 w-9 sm:w-10 h-9 sm:h-10 rounded-full bg-card/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
                 >
-                  <Github size={18} />
+                  <Github size={16} className="sm:hidden" />
+                  <Github size={18} className="hidden sm:block" />
                 </a>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {project.period && (
-                  <p className="text-sm text-muted-foreground flex items-center gap-2 mb-2">
-                    <Calendar size={14} />
+                  <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2 mb-2">
+                    <Calendar size={12} className="sm:w-4 sm:h-4" />
                     {project.period}
                   </p>
                 )}
-                <h3 className="text-xl font-bold font-display text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold font-display text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                   {project.title}
                 </h3>
                 {project.subtitle && (
-                  <p className="text-sm text-primary mb-3">{project.subtitle}</p>
+                  <p className="text-xs sm:text-sm text-primary mb-3">{project.subtitle}</p>
                 )}
-                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                <p className="text-muted-foreground text-xs sm:text-sm mb-4 line-clamp-2">{project.description}</p>
 
-                <div className="space-y-2 mb-5">
-                  {project.details.map((detail, idx) => (
-                    <p key={idx} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary/50 mt-2 shrink-0" />
+                <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-5">
+                  {project.details.slice(0, 1).map((detail, idx) => (
+                    <p key={idx} className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex items-start gap-2 line-clamp-2">
+                      <span className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-primary/50 mt-1.5 sm:mt-2 shrink-0" />
                       {detail}
                     </p>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {project.techStack.slice(0, 4).map((tech) => (
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
+                  {project.techStack.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium"
+                      className="text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-primary/10 text-primary font-medium"
                     >
                       {tech}
                     </span>
                   ))}
-                  {project.techStack.length > 4 && (
-                    <span className="text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground font-medium">
-                      +{project.techStack.length - 4} more
+                  {project.techStack.length > 3 && (
+                    <span className="text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-muted text-muted-foreground font-medium">
+                      +{project.techStack.length - 3}
                     </span>
                   )}
                 </div>
@@ -156,10 +157,10 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-primary font-semibold hover:gap-3 transition-all duration-300"
                 >
                   View Project
-                  <ExternalLink size={16} />
+                  <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                 </a>
               </div>
             </div>

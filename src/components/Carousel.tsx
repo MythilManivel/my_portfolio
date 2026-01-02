@@ -137,10 +137,10 @@ const Carousel = () => {
 
   return (
     <section
-      className="w-full max-w-7xl mx-auto my-20 px-4"
+      className="w-full max-w-7xl mx-auto my-12 sm:my-16 md:my-20 px-2 sm:px-4"
       aria-label="Honors and Awards Carousel"
     >
-      <h2 className="text-4xl md:text-5xl font-bold font-display text-center text-foreground mb-14 tracking-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-center text-foreground mb-10 sm:mb-14 tracking-tight">
         Honors & Awards
       </h2>
 
@@ -151,11 +151,11 @@ const Carousel = () => {
           timeoutRef.current = setTimeout(() => nextSlide(), 4000);
         }}
       >
-        {/* Left Arrow */}
+        {/* Left Arrow - Hidden on mobile */}
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card/95 text-foreground/80 border border-border shadow-md hover:shadow-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="hidden sm:absolute sm:-left-4 md:-left-6 sm:top-1/2 sm:-translate-y-1/2 sm:z-10 sm:w-10 md:w-12 sm:h-10 md:h-12 rounded-full bg-card/95 text-foreground/80 border border-border shadow-md hover:shadow-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           type="button"
         >
           ❮
@@ -180,11 +180,11 @@ const Carousel = () => {
             {extendedImages.map((item, i) => (
               <li
                 key={i}
-                className="px-4 flex-shrink-0"
+                className="px-2 sm:px-4 flex-shrink-0"
                 style={{ width: `${100 / extendedImages.length}%` }}
               >
-                <article className="h-full bg-card rounded-2xl border border-border card-hover overflow-hidden">
-                  <div className="h-52 overflow-hidden">
+                <article className="h-full bg-card rounded-lg sm:rounded-2xl border border-border card-hover overflow-hidden">
+                  <div className="h-40 sm:h-52 overflow-hidden">
                     <img
                       src={item.src}
                       alt={item.caption}
@@ -192,9 +192,9 @@ const Carousel = () => {
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
-                  <div className="p-5">
-                    <div className="w-10 h-1 bg-primary rounded-full mb-3" />
-                    <p className="text-sm font-medium text-foreground leading-snug">{item.caption}</p>
+                  <div className="p-3 sm:p-5">
+                    <div className="w-8 sm:w-10 h-1 bg-primary rounded-full mb-2 sm:mb-3" />
+                    <p className="text-xs sm:text-sm font-medium text-foreground leading-snug">{item.caption}</p>
                   </div>
                 </article>
               </li>
@@ -202,20 +202,20 @@ const Carousel = () => {
           </ul>
         </div>
 
-        {/* Right Arrow */}
+        {/* Right Arrow - Hidden on mobile */}
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card/95 text-foreground/80 border border-border shadow-md hover:shadow-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="hidden sm:absolute sm:-right-4 md:-right-6 sm:top-1/2 sm:-translate-y-1/2 sm:z-10 sm:w-10 md:w-12 sm:h-10 md:h-12 rounded-full bg-card/95 text-foreground/80 border border-border shadow-md hover:shadow-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           type="button"
         >
           ❯
         </button>
       </div>
 
-      {/* Dots */}
+      {/* Dots - Mobile friendly */}
       <div
-        className="flex justify-center mt-10 space-x-2"
+        className="flex justify-center mt-8 sm:mt-10 space-x-1.5 sm:space-x-2 px-4 overflow-x-auto"
         role="tablist"
         aria-label="Slide navigation dots"
       >
