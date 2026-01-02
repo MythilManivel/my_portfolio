@@ -1,26 +1,28 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const images = [
-  { src: "/src/assets/pic1.jpeg", caption: "Event Ambassador – Mechnotron 2K25" },
-  { src: "/src/assets/pic2.jpg", caption: "Award Recognition Ceremony" },
-  { src: "/src/assets/pic11.jpeg", caption: "Hackathon – 3rd Place | CIT" },
-  { src: "/src/assets/BATCH1.jpeg", caption: "Earned 200-Day LeetCode Badge" },
-  { src: "/src/assets/pic4.jpg", caption: "Academic Excellence Award (2025)" },
+  { src: "/carousel/pic1.jpeg", caption: "Event Ambassador – Mechnotron 2K25" },
+  { src: "/carousel/pic2.jpg", caption: "Award Recognition Ceremony" },
+  { src: "/carousel/pic11.jpeg", caption: "Hackathon – 3rd Place | CIT" },
+  { src: "/carousel/BATCH1.jpeg", caption: "Earned 200-Day LeetCode Badge" },
+  { src: "/carousel/pic4.jpg", caption: "Academic Excellence Award (2025)" },
   {
-    src: "/src/assets/pic10.jpeg",
-    caption: "Smart Hospitals in the Modern Era – Surgical Robots in Smart Hospitals | Book Chapter (Chapter 7) – Wiley",
+    src: "/carousel/pic10.jpeg",
+    caption:
+      "Smart Hospitals in the Modern Era – Surgical Robots in Smart Hospitals | Book Chapter (Chapter 7) – Wiley",
   },
-  { src: "/src/assets/batch3.jpeg", caption: "AWS Certified Cloud Practitioner" },
-  { src: "/src/assets/pic7.jpeg", caption: "2nd Prize – Project Presentation | SKCET" },
-  { src: "/src/assets/pic5.jpeg", caption: "Project Expo Event – Technical Showcase" },
-  { src: "/src/assets/pic9.jpeg", caption: "Best Student Award (2023 - 2024)" },
-  { src: "/src/assets/pic14.jpeg", caption: "Academic Achievement Moment" },
-  { src: "/src/assets/pic6.jpeg", caption: "Workshop Coordinator – National Level Workshop (KEC)" },
-  { src: "/src/assets/car.jpeg", caption: "Explored new skills in Robotics Lab" },
-  { src: "/src/assets/pic8.jpeg", caption: "Newsletter released to KEC Principal" },
-  { src: "/src/assets/news.jpeg", caption: "Publishing 5+ Newsletters" },
-  { src: "/src/assets/BATCH2.jpg", caption: "Earned 50 problem completions in CodeChef batch" },
+  { src: "/carousel/batch3.jpeg", caption: "AWS Certified Cloud Practitioner" },
+  { src: "/carousel/pic7.jpeg", caption: "2nd Prize – Project Presentation | SKCET" },
+  { src: "/carousel/pic5.jpeg", caption: "Project Expo Event – Technical Showcase" },
+  { src: "/carousel/pic9.jpeg", caption: "Best Student Award (2023 - 2024)" },
+  { src: "/carousel/pic14.jpeg", caption: "Academic Achievement Moment" },
+  { src: "/carousel/pic6.jpeg", caption: "Workshop Coordinator – National Level Workshop (KEC)" },
+  { src: "/carousel/car.jpeg", caption: "Explored new skills in Robotics Lab" },
+  { src: "/carousel/pic8.jpeg", caption: "Newsletter released to KEC Principal" },
+  { src: "/carousel/news.jpeg", caption: "Publishing 5+ Newsletters" },
+  { src: "/carousel/BATCH2.jpg", caption: "Earned 50 problem completions in CodeChef batch" },
 ];
+
 
 const imagesToShowDefault = 4;
 
