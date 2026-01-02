@@ -81,7 +81,7 @@ const Publications = () => {
                 </ul>
 
                 {/* ISBN + Link */}
-                <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6 text-xs sm:text-sm text-muted-foreground">
+                <div className="flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
                   <p className="text-xs sm:text-base">
                     <strong>ISBN:</strong> {pub.isbn}
                   </p>
@@ -92,13 +92,16 @@ const Publications = () => {
                     className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
                   >
                     <Link className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    View Publication
+                  </a>
+                </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {pub.tags.map((tag) => (
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
+                  {pub.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary font-medium"
+                      className="text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded-full bg-primary/10 text-primary font-medium"
                     >
                       {tag}
                     </span>
