@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-xs sm:text-sm text-muted-foreground dark:text-muted-foreground-dark">
-            <p>© 2025 Mythili. All rights reserved.</p>
+            <p>© 2026 Mythili. All rights reserved.</p>
             <p
               className="flex items-center justify-center gap-1 mt-0.5 sm:mt-1"
               aria-label="Designed and built with love by Mythili"
