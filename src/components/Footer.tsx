@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Social & Contact Links */}
           <div className="flex items-center gap-3 sm:gap-5">
             <a
-              href="https://github.com/MythilManivel/"
+              href="https://github.com/Mythili23Manivel/"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-button w-9 h-9 sm:w-10 sm:h-10"
