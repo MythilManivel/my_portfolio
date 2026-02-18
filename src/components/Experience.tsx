@@ -9,8 +9,7 @@ const experienceData = [
     location: 'Bangalore',
     linkedInUrl: 'https://www.linkedin.com/posts/mythilimanivel_internshipcompletion-ai-machinelearning-activity-7359183756986920960-y3WE',
     highlights: [
-      'Developed a Turmeric Leaf Disease Classification system using Convolutional Neural Networks (CNN) to accurately identify multiple disease categories.',
-      'Implemented Turmeric Quality Assessment models including size estimation and freshness classification (Old vs New) using deep learning techniques.',
+      'Developed a Turmeric Leaf Disease Classification system using Convolutional Neural Networks (CNN) to accurately identify multiple disease categories.Implemented Turmeric Quality Assessment models including size estimation and freshness classification (Old vs New) using deep learning techniques.',
       'Built an Automatic Number Plate Recognition (ANPR) system using YOLO-based object detection integrated with OCR for real-time vehicle tracking.',
       'Worked on Textile Fabric Defect Detection and Production Progress Monitoring systems to identify cloth faults and track manufacturing workflow efficiency.',
       'Designed and developed the official corporate website for CubeAI Solutions with a responsive, modern UI aligned to company branding.',
